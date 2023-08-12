@@ -11,14 +11,38 @@
             height: 300px;
             width: 300px;
             border-radius: 50%;
-            color: yellow;
-
+            border: 4px solid;
+            margin: 100px;
+        }
+        button{
+            padding: 10px 20px;
+            font-size: 40px;
+            font-weight: bold;
+            margin-left: 190px;
         }
     </style>
+    
 </head>
 <body>
     <div id="bulb">
         
     </div>
+    <button>ON</button>
 </body>
+
+<script>
+    var bulb = document.querySelector("#bulb")
+    var btn = document.querySelector("button")
+    var flag = 0 
+    btn.addEventListener("click",function(){
+        if (flag == 0){
+            bulb.style.backgroundColor = "yellow"
+            flag = 1
+        }else{
+            bulb.style.backgroundColor = "transparent"
+            flag = 0
+        }
+        
+    })
+    </script>
 </html>
