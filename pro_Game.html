@@ -51,6 +51,8 @@
         }
         #pbtm{
             display: flex;
+            align-items: center;
+            justify-content: center;
             gap: 10px;
             flex-wrap: wrap;
             padding: 10px;
@@ -72,9 +74,7 @@
             background-color:  rgb(16, 98, 43);
         }
     </style>
-    <script>
-        
-    </script>
+   
 
 </head>
 <body>
@@ -83,21 +83,74 @@
             <div id="ptop">
                 <div class="elm">
                     <h2>Hit</h2>
-                    <div class="box"> 5</div>
+                    <div id="hitval" class="box"> 5</div>
                 </div>
                 <div class="elm">
                     <h2>Timer</h2>
-                    <div class="box"> 60</div>
+                    <div id="timerval" class="box"> 60</div>
                 </div>
                 <div class="elm">
                     <h2>Score</h2>
-                    <div class="box"> 00</div>
+                    <div id="scorval" class="box"> 00</div>
                 </div>
             </div>
             <div id="pbtm">
-                <div class="bubble"><h2>6</h2></div>
+                
             </div>
         </div>
     </div>
 </body>
+<script>
+var timer = 60;
+var score = 0;
+var hitrn = 0;
+
+ function makeBubble(){
+    var clutter ="";
+    for ( var i = 1; i<=175; i++){
+    var rn = Math.floor(Math.random()*10)
+    clutter += `<div class="bubble"><h2>${rn}</h2></div>`
+}
+    document.querySelector("#pbtm").innerHTML = clutter;
+ }
+
+ function runTimer(){
+    var timerint = setInterval(function(){
+        if (timer > 0){
+            timer--;
+            document.querySelector("#timerval").textContent = timer;
+        }else {
+            clearInterval(timerint);
+            document.querySelector("#pbtm").innerHTML = "<h1>Game Over</h1>"
+        }
+    },1000);
+ }
+
+ function hitValue(){
+    hitrn = Math.floor(Math.random() *10)
+    document.querySelector("#hitval"). textContent = hitrn;
+ }
+
+ function addScore(){
+    score += 10;
+    document.querySelector("#scorval").textContent = score;
+ }
+
+ document.querySelector("#pbtm").addEventListener("click",function(dets){
+    var clicknum = (Number(dets.target.textContent))
+    if (clicknum === hitrn){
+        addScore();
+        makeBubble();
+        hitValue();
+
+    }
+
+ })
+
+ 
+ runTimer();
+ makeBubble();
+ hitValue();
+    
+</script>
 </html>
