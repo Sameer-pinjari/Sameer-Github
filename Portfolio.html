@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/node_modules/jquery/dist/jquery.js">
+    <style>
+
+        header{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: aquamarine;
+            padding: 35px;
+            height: 50px;
+            margin-top: 10px;
+            
+        }
+
+        .hd-right{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 50px;
+            
+        }
+
+        main{
+            display: flex;
+            justify-content: space-around;
+            margin-top: 5px;
+            height: 1200px;
+            background-color: rgb(65, 61, 77);
+            color: azure;
+            padding: 20px;
+        }
+        
+        .home{
+            font-weight: 500;
+            margin-top: 200px;
+            font-size: 40px;
+        }
+        img{
+            width: 500px;
+            height: 500px;
+            margin-top: 60px;
+        }
+        #element{
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Sameer'Portfolio</h1>
+        </div>
+        <div class="hd-right">
+            <div>
+                <h4>Home</h4>
+            </div>
+            <div>
+                <h4>About</h4>
+            </div>
+            <div>
+                <h4>Eduction</h4>
+            </div>
+            <div>
+                <h4>Projects</h4>
+            </div>
+            <div>
+                <h4>Contact me</h4>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="s-left">         
+            <div class="home">
+                <div>Hi, My name is <span style="color: yellow;">Sameer</span></div>
+                <div>and, I am passionate</div>
+                <span id="element"></span>
+            </div>
+        </section>
+        <section class="s-right">
+            <div>
+                <img src="/src/image/img2.png" alt="">
+            </div>
+           
+        </section>
+    </main>
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+          strings: ['Web Developer.'],
+          typeSpeed: 50,
+        });
+      </script>
+</body>
+</html>
