@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <style>
-
+        body{
+            margin: 0;
+            padding: 0;
+        }
         header{
             color: azure;
             display: flex;
@@ -16,7 +19,7 @@
             background-color: rgba(0, 0, 0, 0.869);
             padding: 35px;
             height: 50px;
-            margin-top: 10px;
+            width: 100%;
         }
 
         a{
@@ -39,21 +42,24 @@
 
         main{
             background-color: rgb(223, 235, 235);
-            height: 3000px;
-            padding: 20px;
+            height: 100%;
             width: 100%;
         }
+         img{
+            width: 600px;
+            height: 500px
+         }
 
         .top{
-            margin-left: 100px;
+            left: 100px;
             padding: 50px;
             font-weight: bold;
         }
 
         .first-row{
             display: flex;
-            justify-content: space-around;
             align-items: center;
+            justify-content: space-around;
             padding-top: 100px;
             border-bottom: 2px solid rgb(0, 0, 0);
             padding-bottom: 130px;
@@ -88,8 +94,7 @@
 
         .card{
             padding: 20px;
-            height: 245px;
-            text-align: center;
+            align-items: center;
             font-size: 20px;
             box-shadow: 2px 4px 2px gray;
             font-weight: 35px;
@@ -101,6 +106,11 @@
             padding: 10px;
             margin: 50px auto;
             
+            
+        }
+
+        .bor{
+            border-bottom: 2px solid black;
         }
 
         .wrapper .center-line{
@@ -163,9 +173,14 @@
             margin-top: 10px;
             font-weight: bold;
         }
-        
-        
-
+        footer{
+            background-color: gray;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 50px;
+        }
     </style>
 </head>
 <body>
@@ -192,43 +207,45 @@
         </div>
     </header>
     <main>
-       <div>
-            <div class="first-row">
-                <div> 
-                    <div class="home">
-                        <div>Hi, My name is <span style="color: rgb(251, 46, 94);">Sameer</span></div>
-                        <div>and, I am passionate</div>
-                            <span id="element"></span>
-                    </div>
-                        <div>
-                            <button> Resume. </button>
-                        </div>
+      <div class="contenar"></div>
+      <div>
+        <div class="first-row">
+            <div> 
+                <div class="home">
+                    <div>Hi, My name is <span>Sameer</span></div>
+                    <div>and, I am passionate</div>
+                        <span id="element"></span>
                 </div>
                     <div>
-                        <div><img src="/src/image/web_development_banner.svg" alt=""></div>
-                    </div>  
+                        <button> Resume. </button>
+                    </div>
             </div>
-       </div>
-       <div>
-            <div class="top">
-                <h1 >About</h2>
-            </div>
-            <div class="second-row">
                 <div>
-                    <div><img src="/src/image/ui-technology-2.gif" style="width: 600px; height: 400px; border-radius: 10px;" alt=""></div>
-                </div>
-                <div class="card">
-                    <p>Hi, My name is Sameer sk Ayyub Pinjari.<br>I am belog to
-                    Dhule distic, but i live in <br> pune I have recently completed master's in <br> computer science  
-                    form Dr.Babasaheb <br> Ambedkar Marathwada Univarcity Aurangabad <br>, then I got tenning in ui-technology<br>  
-                    form Naresh IT Hyadrabad. 
-                    
-                    </p>
-                </div>
+                    <div><img src="/src/image/web_development_banner.svg" alt=""></div>
+                </div>  
+        </div>
+   </div>
+   <div>
+        <div class="top">
+            <h1 >About</h2>
+        </div>
+        <div class="second-row">
+            <div>
+                <div><img src="/src/image/ui-technology-2.gif" alt=""></div>
             </div>
-            <div class="top">
-                <h1>Education</h1>
+            <div class="card">
+                <p>Hi, My name is Sameer sk Ayyub Pinjari.<br>I am belog to
+                Dhule distic, but i live in <br> pune I have recently completed master's in <br> computer science  
+                form Dr.Babasaheb <br> Ambedkar Marathwada Univarcity Aurangabad <br>, then I got tenning in ui-technology<br>  
+                form Naresh IT Hyadrabad. 
+                
+                </p>
             </div>
+        </div>
+        <div class="top">
+            <h1>Education</h1>
+        </div>
+        <div class="bor">
             <div class="wrapper">
                 <div class="center-line"></div>
                     <div class="row row-1">
@@ -278,9 +295,21 @@
                         </section>
                     </div>
             </div> 
-
-       </div>
-
+        </div>
+   </div>
+   <footer>
+        <div>
+            <h3>Contact</h3> 
+            <li>Mobile no:- 9156579009</li>
+            <li>Gmail :- shaikhsameer@gmail.com</li>
+        </div>
+        <div>
+            <h3>Social Media</h3>
+            <li class="ri-instagram-line"> Instagram</li>
+            <li class="ri-facebook-box-line"> Facebook</li>
+            <li class="ri-twitter-x-line"> Twitter</li>
+        </div>
+   </footer>
     </main>
 
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
